@@ -168,8 +168,8 @@ img{
     max-width: 70%;
     margin-top: 20px;
     .pure-input{
-      padding: 1px 10px 7px 10px;
-      font-size: 1.4em;
+      padding: 5px 10px 6px 10px;
+      font-size: 1.2em;
       border-color: $purple_light;
     }
     .text-field{
@@ -178,6 +178,9 @@ img{
     .submit-field{
       display: inline-block;
       margin-left: 5px;
+      .pure-button.pure-button-secondary{
+        padding: 7px 25px 6px 25px;
+      }
     }//.submit-field
   }//.header-search-form
 }//.site-header
