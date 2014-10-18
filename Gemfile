@@ -36,7 +36,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pure-css-rails'
 
 # The mother of the lamb
-gem 'searchkick'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
