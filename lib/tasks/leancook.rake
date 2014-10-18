@@ -18,4 +18,8 @@ namespace :leancook do
     end
   end
 
+  desc 'Reindex data'
+  task reindex: :environment do
+    Recipe.reindex
+  end
 end
