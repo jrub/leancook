@@ -1,34 +1,29 @@
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-    <div class="pure-g">
-        <div class="pure-u-1-4">
-          <%= link_to 'Leancook', root_path, class: 'pure-menu-heading' %>
-        </div>
+<header class="site-header search-header">
+  <div class="pure-g">
+    <h2><%= link_to 'leancook', root_path, class: 'pure-menu-heading' %></h2>
 
-        <div class="pure-u-3-4">
-          <%= form_tag search_path, method: 'get', class: 'pure-form pure-g' do %>
-            <div class="pure-u-2-3 pure-u-md-1-3">
-              <%= text_field_tag :query, query_value(@query), placeholder: 'Write here your ingredients', class: 'pure-input-1' %>
-            </div>
-            <div class="pure-u-1-3 pure-u-md-1-3">
-              <%= button_tag 'Search', class: 'pure-input-3 pure-button pure-button-primary' %>
-            </div>
-          <% end %>
+    <div class="header-search-form">
+      <%= form_tag search_path, method: 'get', class: 'pure-form' do %>
+        <div class="text-field">
+          <%= text_field_tag :query, query_value(@query), placeholder: 'Write here your ingredients', class: 'pure-input' %>
         </div>
-
+        <div class="submit-field">
+          <%= button_tag 'Search', class: 'pure-input-3 pure-button pure-button-secondary' %>
         </div>
+      <% end %>
     </div>
+  </div><!-- .pure-g -->
+</header>
 
-
-</div>
-
-<div class="pure-g">
+<div class="pure-g main-content search-content">
+  <div class="recipe-boxes">
     <% @recipes.each do |recipe| %>
-      <div class="pure-u-1-5 recipe-box">
+      <div class="recipe-box">
         <a href="<%=recipe.url%>">
           <img src="<%=recipe.image%>">
+          <h3><%=recipe.name%></h3>
         </a>
-        <p><%=recipe.name%></p>
       </div>
     <% end %>
+  </div><!-- .recipe-boxes -->
 </div>
