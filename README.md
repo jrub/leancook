@@ -1,5 +1,11 @@
 # README
 
+## Depencies
+
+  - Ruby 2.1.2 (other versions not tested)
+  - Bundler
+  - Elastic search (requires JDK & JSDK < 1.8)
+
 ## Setup
 
 Copy yml configuration files from examples:
