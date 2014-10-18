@@ -1,0 +1,268 @@
+/***** COLORS *****/
+$purple_dark: #3C072E;
+$purple_light: #85274E;
+$pink: #E32353;
+$creme: #FFC6A9;
+$yellow: #FFF2B7;
+
+$background_main: #fff;
+
+/***** FONTS *****/
+$font_lato: 'Lato', sans-serif;
+$font_merriweather: 'Merriweather', serif;
+
+
+/***** FONT WEIGHTS *****/
+
+$font_thin: 100;
+$font_light: 300;
+$font_normal: 400;
+$font_semibold: 500;
+$font_bold: 700;
+
+
+/*****************************************/
+/************* GENERAL STYLES ************/
+/*****************************************/
+
+*, html, body, input, textarea, button{
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+  font-family: $font_lato;
+}
+
+a{
+  text-decoration: none;
+  -webkit-transition: all 0.05s;
+  -moz-transition: all 0.05s;
+  transition: all 0.05s;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+html{
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  //overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+body{
+  min-height: 100%;
+  font-size: 100%;
+}
+
+body{
+  font-family: $font_lato;
+  font-weight: $font_normal;
+  font-size: 18px;
+  line-height: 32px;
+  height: 100%;
+  color: $purple_dark;
+  padding: 0;
+  margin: 0;
+  background-color: $background_main;
+  -webkit-overflow-scrolling: touch;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.pure-g{
+  width: 800px;
+  max-width: 95%;
+  margin: 0 auto;
+}//.pure-g
+
+.pure-input{
+  padding: 15px 20px;
+  border: 1px solid $purple_light;
+  border-radius: 3px;
+  font-family: $font_lato;
+  font-weight: $font_light;
+  outline: none;
+  font-size: 1.25em;
+}
+
+.pure-button{
+  &.pure-button-primary{
+    text-transform: uppercase;
+    text-align: center;
+    color: $yellow;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 3px;
+    font-size: 1.3em;
+    font-weight: $font_light;
+    font-family: $font_lato;
+    cursor: pointer;
+    background-color: $purple_light;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border: 2px solid transparent;
+    &:hover{
+      background-color: $creme;
+      color: $purple_light;
+    }
+    &:active{
+      border-color: $purple_light;
+      color: $purple_light;
+      background-color: #fff;
+    }
+  }//.pure-button-primary
+}//.pure-button
+
+/**************************************/
+/************* SITE HEADER ************/
+/**************************************/
+
+.site-header{
+  padding: 25px 0px;
+  text-align: center;
+  h1{
+    font-family: $font_lato;
+    font-weight: $font_light;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-shadow: none;
+    text-align: left;
+    font-size: 3em;
+    padding-left: 80px;
+    min-height: 82px;
+    line-height: 75px;
+    color: $purple_light;
+    background: transparent image-url('logo.png') 0px center no-repeat;
+  }
+  &.home-header{
+    background-color: $yellow;
+  }//.home-header
+}//.site-header
+
+/***************************************/
+/************* MAIN CONTENT ************/
+/***************************************/
+
+.main-content{
+  &.home-search{
+    margin-top: 4em;
+    text-align: center;
+    h2{
+      font-weight: $font_bold;
+      font-size: 2em;
+      margin-bottom: 1.5em;
+    }
+    .home-search-form{
+      .pure-input{
+        width: 100%;
+      }
+      .text-field{
+        margin-bottom: 1em;
+      }//.text-field
+      .submit-field{
+
+      }//.submit-field
+    }//.home-search-form
+  }//.home-search
+}//.main-content
+
+
+
+
+/****************************************/
+/************ MEDIA QUERIES *************/
+/****************************************/
+
+@media (min-width: 75em){
+}
+
+@media (max-width: 68em){
+  
+}
+
+@media (max-width: 50em){
+}
+
+@media (max-width: 46.8em){
+}
+
+@media (max-width: 38em){
+  .main-content{
+    &.home-search{
+      h2{
+        font-weight: $font_bold;
+        font-size: 1.7em;
+        margin-bottom: 1.5em;
+      }
+    }//.home-search
+  }//.main-content
+}
+
+@media (max-width: 31em){
+  .main-content{
+    &.home-search{
+      h2{
+        font-weight: $font_bold;
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+      }
+    }//.home-search
+  }//.main-content
+}
+
+
+
+
+
+
+/****
+#wrapper {
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+header h1 {
+  font-family: 'Lobster', Georgia, Times, serif;
+  font-size: 90px;
+  line-height: 20px;
+  padding-bottom: 20px;
+  text-shadow: 2px 2px 2px #ccc;
+  text-align: center;
+}
+
+.search {
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 90px;
+  min-height: 300px;
+}
+
+.buttons button{
+  margin-top: 1em;
+  float: right;
+}
+
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+.recipe-box {
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+    text-align: center;
+}
+.recipe-box img {
+    max-width: 100%;
+    height: auto;
+    height: 250px;
+}
+**/
