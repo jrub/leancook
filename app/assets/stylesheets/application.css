@@ -47,14 +47,14 @@ header h1 {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 
-.recipe-box, .text-box {
+.recipe-box {
     overflow: hidden;
     position: relative;
-    height: 250px;
+    height: 350px;
     text-align: center;
 }
 .recipe-box img {
     max-width: 100%;
     height: auto;
-    min-height: 250px;
+    height: 250px;
 }
