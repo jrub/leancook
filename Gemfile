@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # CSS framework
 gem 'pure-css-rails'
 
+# The mother of the lamb
+gem 'searchkick'
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
