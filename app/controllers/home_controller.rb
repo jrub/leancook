@@ -5,6 +5,6 @@ class HomeController < ApplicationController
   def search
     @query = params[:query].presence || '*'
 
-    @recipes = Recipe.search @query
+    @recipes = Recipe.search_by_ingredients @query
   end
 end
