@@ -3,10 +3,8 @@ class HomeController < ApplicationController
   end
 
   def search
-    @recipes = if params[:query].present?
-                 Recipe.search params[:query]
-               else
-                 Recipe.all
-               end
+    @query = params[:query].blank? ? '*' : params[:query]
+
+    @recipes = Recipe.search @query
   end
 end
