@@ -231,8 +231,12 @@ img{
           display: inline-block;
           color: $purple_light;
           text-decoration: none;
+          border: 1px solid transparent;
+          padding: 5px;
+          border-radius: 3px;
           &:hover{
             color: $pink; 
+            border-color: $pink;
           }
           h3{
             margin: 0;
