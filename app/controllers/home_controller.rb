@@ -3,6 +3,10 @@ class HomeController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.limit(15)
+    @recipes = if params[:query].present?
+                 Recipe.search params[:query]
+               else
+                 Recipe.all
+               end
   end
 end
