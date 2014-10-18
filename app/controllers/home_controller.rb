@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
 
   def search
+    @recipes = Recipe.limit(15)
   end
 end
