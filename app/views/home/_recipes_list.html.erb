@@ -9,7 +9,7 @@
           </span>
         </span>
         <h3><%=recipe.name%></h3>
-        <div class="ingredients"><%= recipe.ingredients%></div>
+        <div class="ingredients"><%= simple_format recipe.ingredients%></div>
       </a>
     </div>
   <% end %>
