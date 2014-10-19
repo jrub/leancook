@@ -37,6 +37,9 @@ gem 'pure-css-rails'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
+# Pagination
+gem 'kaminari'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
