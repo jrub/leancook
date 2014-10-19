@@ -10,18 +10,25 @@
 
 Copy yml configuration files from examples:
 
-  ```
-    $ cp config/database.yml.example config/database.yml
-    $ cp config/secrets.yml.example config/secrets.yml
-  ```
+```
+  $ cp config/database.yml.example config/database.yml
+  $ cp config/secrets.yml.example config/secrets.yml
+```
 
 Install gems
-  ```
-    $ bundle install
-  ```
 
-Create databases
+```
+  $ bundle install
+```
 
-  ```
-    $ rake db:create
-  ```
+Create databases and tables
+
+```
+  $ rake db:create db:migrate
+```
+
+Index data
+
+```
+  $ bundle exec rake environment elasticsearch:import:model CLASS='Recipe'
+```
