@@ -41,3 +41,22 @@ Index data
 
 
 * Recipes data source: https://github.com/fictivekin/openrecipes
+
+## Heroku addons
+
+### Bonsai
+
+*REQUIRED* Create index in production:
+
+```
+ $ heroku run bundle exec rake environment elasticsearch:import:model CLASS='Recipe' FORCE=true
+```
+
+Documentation: https://devcenter.heroku.com/articles/bonsai
+
+Dashboard:
+
+```
+ $ heroku addons:open bonsai
+```
+
