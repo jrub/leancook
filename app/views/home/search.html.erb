@@ -21,7 +21,7 @@
     <div class="recipe-boxes">
       <% @recipes.each do |recipe| %>
         <div class="recipe-box">
-          <a href="<%=recipe.url%>">
+          <a href="<%=recipe.url%>" target="blank">
             <img src="<%=recipe.image%>">
             <h3><%=recipe.name%></h3>
           </a>
