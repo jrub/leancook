@@ -265,13 +265,15 @@ img{
         width: 100%;
       }
       .text-field{
-        margin-bottom: 0.4em;
+        margin-bottom: 0.6em;
       }//.text-field
       .example-field{
         margin-bottom: 1.5em;
         color: #999;
         text-align: left;
         font-weight: $font_light;
+        line-height: 1.3em;
+        font-size: 0.9em;
         strong{
           font-weight: $font_normal;
         }
