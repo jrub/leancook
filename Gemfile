@@ -36,6 +36,7 @@ gem 'pure-css-rails'
 # The mother of the lamb
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'bonsai-elasticsearch-rails'
 
 # Pagination
 gem 'kaminari'
