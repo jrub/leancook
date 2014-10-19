@@ -271,6 +271,9 @@ img{
         color: #999;
         text-align: left;
         font-weight: $font_light;
+        strong{
+          font-weight: $font_normal;
+        }
       }
       .submit-field{
 
