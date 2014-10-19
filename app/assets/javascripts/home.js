@@ -2,12 +2,10 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(function(){
-    var params = {};
     $("#search_form").on('submit', function(){
         var term = $("#query").val();
         if(term){
-            params[term] = term;
-            var li = $("#search_terms").append('<li>');
+            /*var li = $("#search_terms").append('<li>');
             var anchor = $('<a href="">X</a>').on('click', function(){
                 delete params[term];
                 li.remove();
@@ -15,8 +13,8 @@ $(document).ready(function(){
             });
             console.log($("#search_form").attr('action'))
             li.append(anchor);
-            li.append(term);
-            $("#query").val("");
+            li.append(term);*/
+            load_data(term);
         }
         return false;
         
@@ -29,12 +27,30 @@ $(document).ready(function(){
             $("header").removeClass("home-header");
             $("header").addClass("search-header");
             $("#search_header").show();
-            var action = $("#search_form_home").attr('action');
-            $("#content").html("Loading...")
-            $.get(action, {query: term}, function(html) {
-                $("#content").html(html)
-            });
+            $("#query").val(term);
+            load_data(term);
         }
         return false;
     });
+
+    var load_data = function(term){
+        var action = $("#search_form").attr('action');
+        $("#content").html("Loading...")
+        $.get(action, {query: term}, function(html) {
+            if(supports_history_api()) {
+                var query = term.split(" ").join("+")
+                history.pushState(null, null, action+"?query="+query);
+            }
+            $("#content").html(html);
+            $("img").error(function () {
+                console.log("Imagen por defecto hostias, que esta peta")
+                $(this).css("display", "none");
+            });
+        });
+    }
+
+
+    var supports_history_api = function() {
+        return !!(window.history && history.pushState);
+    }
 });
