@@ -249,6 +249,9 @@ img{
   }//.home-search
   &.search-content{
     margin-top: 2em;
+    h1.search-title{
+      margin-bottom: 1em;
+    }
     .recipe-boxes{
       text-align: justify;
       font-size: 0;      
@@ -278,15 +281,15 @@ img{
             width: 100%;
           }
           h3{
-            margin: 0;
             font-size: 1.2em;
             line-height: 1.3em;
             font-weight: $font_bold;
-            margin-bottom: 0.4em;
+            margin-bottom: 0.6em;
+            margin-top: 0.1em;
           }//h3
           .ingredients{
             line-height: 1.3em;
-            color: #777;
+            color: #888;
             font-size: 0.95em;
           }
           &:hover{
