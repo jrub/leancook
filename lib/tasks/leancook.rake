@@ -23,7 +23,7 @@ namespace :leancook do
 
   desc 'Reindex data'
   task reindex: :environment do
-    Recipe.reindex
+    Recipe.import
   end
 end
 
