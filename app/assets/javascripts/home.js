@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     var load_data = function(term){
         var action = $("#search_form").attr('action');
-        $("#content").html("Loading...")
+        $("#content").html('<div class="pure-g"><div class="loading"><span class="spinner"></span><br />Loading...</div></div>');
         $.get(action, {query: term}, function(html) {
             if(supports_history_api()) {
                 var query = term.split(" ").join("+")
