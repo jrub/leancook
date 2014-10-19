@@ -5,15 +5,6 @@ $(document).ready(function(){
     $("#search_form").on('submit', function(){
         var term = $("#query").val();
         if(term){
-            /*var li = $("#search_terms").append('<li>');
-            var anchor = $('<a href="">X</a>').on('click', function(){
-                delete params[term];
-                li.remove();
-                return false;
-            });
-            console.log($("#search_form").attr('action'))
-            li.append(anchor);
-            li.append(term);*/
             load_data(term);
         }
         return false;
@@ -42,10 +33,6 @@ $(document).ready(function(){
                 history.pushState(null, null, action+"?query="+query);
             }
             $("#content").html(html);
-            $("img").error(function () {
-                console.log("Imagen por defecto hostias, que esta peta")
-                $(this).css("display", "none");
-            });
         });
     }
 
