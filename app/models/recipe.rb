@@ -8,6 +8,7 @@ class Recipe < ActiveRecord::Base
           query: query,
           fuzziness: 2,
           fields: [:name, 'ingredients^10', :description],
+          minimum_should_match: '70%',
           cutoff_frequency: 0.1
         }
       }
