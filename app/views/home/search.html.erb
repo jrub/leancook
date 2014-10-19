@@ -26,8 +26,7 @@
             <span class="image-wrapper">
               <span class="image" style="background-image: url(<%=recipe.image%>);"></span>
               <span class="time-icon">
-                <span class="value">45</span>
-                <span class="label">min</span>
+                <%=raw cook_mins(recipe)%>
               </span>
             </span>
             <h3><%=recipe.name%></h3>
