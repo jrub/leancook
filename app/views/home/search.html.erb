@@ -1,21 +1,21 @@
 <%unless request.xhr?%>
-<header class="site-header search-header">
-  <div class="pure-g">
-    <h2><%= link_to 'leancook', root_path, class: 'pure-menu-heading' %></h2>
+  <header class="site-header search-header">
+    <div class="pure-g">
+      <h2><%= link_to 'leancook', root_path, class: 'pure-menu-heading' %></h2>
 
-    <div class="header-search-form">
-      <%= form_tag search_path, method: 'get', class: 'pure-form', id: 'search_form' do %>
-        <div class="text-field">
-          <%= text_field_tag :query, query_value(@query), placeholder: 'Write your ingredients', class: 'pure-input' %>
-        </div>
-        <div class="submit-field">
-          <%= button_tag 'Search', class: 'pure-input-3 pure-button pure-button-secondary' %>
-        </div>
-      <% end %>
-    </div>
-  </div><!-- .pure-g -->
-</header>
-<div id="content" class="site-content">
+      <div class="header-search-form">
+        <%= form_tag search_path, method: 'get', class: 'pure-form', id: 'search_form' do %>
+          <div class="text-field">
+            <%= text_field_tag :query, query_value(@query), placeholder: 'Write your ingredients', class: 'pure-input' %>
+          </div>
+          <div class="submit-field">
+            <%= button_tag 'Search', class: 'pure-input-3 pure-button pure-button-secondary' %>
+          </div>
+        <% end %>
+      </div>
+    </div><!-- .pure-g -->
+  </header>
+  <div id="content" class="site-content">
 <%end%>
 
   <div class="pure-g main-content search-content">
@@ -25,5 +25,15 @@
     </div><!-- .recipe-boxes -->
   </div>
 <%unless request.xhr?%>
-</div>
+  </div>
 <%end%>
+
+<footer class="pure-g site-footer site-footer-search">
+  <nav class="footer-navigation">
+    <ul>
+      <li>
+        <a href="/home/about">about leancook</a>
+      </li>
+    </ul>
+  </nav>
+</footer>

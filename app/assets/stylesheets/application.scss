@@ -107,6 +107,7 @@ img{
     outline: none;
     box-shadow: none;
     border: 2px solid transparent;
+    text-decoration: none;
     &:hover{
       background-color: $creme;
       color: $purple_light;
@@ -376,6 +377,12 @@ img{
         }//a
       }//.recipe-box
     }//.recipe-boxes
+    .more_recipes{
+      text-align: center;
+      a{
+        display: inline-block;
+      }
+    }//.more_recipes
   }//.search-content
   &.static-content{
     font-size: 1em;
@@ -395,8 +402,6 @@ img{
 /**************************************/
 
 .site-footer{
-  position: absolute;
-  bottom: 25px;
   text-align: center;
   width: 100%;
   max-width: 100%;
@@ -418,6 +423,13 @@ img{
         }
       }
     }
+  }
+  &.site-footer-home{
+    position: absolute;
+    bottom: 25px;
+  }
+  &.site-footer-search{
+    margin: 4em 0 2em 0;
   }
 }//.site-footer
 
