@@ -7,7 +7,8 @@ class Recipe < ActiveRecord::Base
         multi_match: {
           query: query,
           fuzziness: 2,
-          fields: [:name, 'ingredients^10', :description]
+          fields: [:name, 'ingredients^10', :description],
+          cutoff_frequency: 0.1
         }
       }
     )
