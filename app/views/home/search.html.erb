@@ -1,3 +1,4 @@
+<%unless request.xhr?%>
 <header class="site-header search-header">
   <div class="pure-g">
     <h2><%= link_to 'leancook', root_path, class: 'pure-menu-heading' %></h2>
@@ -14,7 +15,7 @@
     </div>
   </div><!-- .pure-g -->
 </header>
-
+<%end%>
 <div class="pure-g main-content search-content">
   <div class="recipe-boxes">
     <% @recipes.each do |recipe| %>
@@ -23,6 +24,7 @@
           <img src="<%=recipe.image%>">
           <h3><%=recipe.name%></h3>
         </a>
+        <p><%= recipe.ingredients%></p>
       </div>
     <% end %>
   </div><!-- .recipe-boxes -->

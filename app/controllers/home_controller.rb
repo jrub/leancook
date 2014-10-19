@@ -6,5 +6,8 @@ class HomeController < ApplicationController
     @query = params[:query].presence || '*'
 
     @recipes = Recipe.search_by_ingredients @query
+    respond_to do |format|
+      format.html { render :layout => !request.xhr? }
+    end
   end
 end
