@@ -3,11 +3,23 @@
 <head>
   <title>Leancook. What's in your fridge?</title>
 
+  <link rel="icon" type="image/png" href="<%= asset_path 'favicon.png' %>" />
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:type" content="Website">
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="Leancook. What's in your fridge?" />
+  <meta property="og:description" content="Look for recipes with your fridge ingredients." />
+  <meta property="og:image" content="<%= asset_path 'slogan.png' %>" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Leancook. What's in your fridge?"/>
+  <meta name="twitter:description" content="Look for recipes with your fridge ingredients."/>
+  <meta name="twitter:image" content="<%= asset_path 'slogan.png' %>"/>
+
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-  <meta name="description" content="Look for recipes with your fridge ingredients." />
-  <meta property="og:image" content="<%= asset_path 'logo.png' %>" />
-  <link rel="icon" type="image/png" href="<%= asset_path 'favicon.png' %>" />
   
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= javascript_include_tag 'application' %>
