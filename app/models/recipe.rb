@@ -1,6 +1,6 @@
 class Recipe < ActiveRecord::Base
   include Elasticsearch::Model
-  
+
   paginates_per 15
 
   def self.search_by_ingredients(query)
