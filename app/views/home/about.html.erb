@@ -1,10 +1,36 @@
-<header class="site-header home-header">
-  <div class="pure-g" id="home_header">
-    <div class="pure-u-1">
-      <h1><%= link_to 'leancook', root_path, class: 'pure-menu-heading' %></h1>
-    </div><!-- .pure-u-1 -->
-  </div><!-- .pure-g -->
-  </div><!-- .pure-g -->
+<header class="site-header static-header">
+  <div class="pure-g">
+    <h2><%= link_to 'leancook', root_path, class: 'pure-menu-heading' %></h2>
 </header>
 
-about
+<div id="content" class="site-content">
+  <div class="pure-g main-content static-content">
+  	<h1>About leancook</h1>
+  	<p>
+  		<strong>Leancook</strong> is a project created with love and some beer for the <a href="http://railsrumble.com">Rails Rumble 2014</a>.
+  	</p>
+  	<p>
+  		The code <a href="https://github.com/railsrumble/leancook">on GitHub</a>.
+  	</p>
+  	<h2>Team Members</h2>
+		<ul>
+			<li><a href="http://twitter.com/jrubr">Javier Rubio</a></li>
+			<li><a href="http://twitter.com/dani_latorre">Dani Latorre</a></li>
+			<li><a href="http://twitter.com/leptom">Rafa García</a></li>
+			<li><a href="http://twitter.com/superwillyfoc">Guillermo Latorre</a></li>
+		</ul>
+		<h2>Vote for us. Yes, you can!</h2>
+		<p>You can be one of the millions who are voting us to win the <a href="http://railsrumble.com">Rails Rumble 2014</a> only clicking on the banner at the bottom of this page :)
+		</p>
+		<!-- Place this before your </body> tag. -->
+		<script type="text/javascript">
+		  var rumbleBannerBackgroundColor, rumbleBannerTextColor, rumbleBannerLinkColor, rumbleBannerPlacement;
+		  rumbleBannerBackgroundColor = "#E32353";
+		  rumbleBannerTextColor = "#3C072E";
+		  rumbleBannerLinkColor = "#fff";
+		  rumbleBannerPlacement = "bottom"; // Optionally replace with "bottom".
+		</script>
+		<script src="https://d4nnn7wspfa3h.cloudfront.net/banner-2014.js" type="text/javascript"></script>
+
+  </div><!-- .static-content -->
+</div><!-- .site-content -->

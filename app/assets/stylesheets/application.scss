@@ -64,6 +64,7 @@ body{
   color: $purple_dark;
   padding: 0;
   margin: 0;
+  position: relative;
   background-color: $background_main;
   -webkit-overflow-scrolling: touch;
 }
@@ -139,21 +140,25 @@ img{
     text-shadow: none;
     text-align: left;
     font-size: 3em;
-    padding-left: 80px;
     min-height: 82px;
     line-height: 75px;
     color: $purple_light;
-    background: transparent image-url('logo.png') 0px center no-repeat;
     a{
+      display: inline-block;
       color: $purple_light;
       text-decoration: none;
+      padding-left: 80px;
+      min-height: 82px;
+      background: transparent image-url('logo.png') 0px center no-repeat;
     }
   }//h1, h2
   h2{
     font-size: 1.8em;
-    padding-left: 52px;
-    background: transparent image-url('logo-mini.png') 0px center no-repeat;
     float: left;
+    a{
+      padding-left: 52px;
+      background: transparent image-url('logo-mini.png') 0px center no-repeat;
+    }
   }
   &.home-header{
   }//.home-header
@@ -165,6 +170,11 @@ img{
       width: 25%;
     }
   }//.search-header
+  &.static-header{
+    overflow: hidden;
+    text-align: center;
+    padding: 0px;
+  }
   .header-search-form{
     display: inline-block;
     float: right;
@@ -193,9 +203,9 @@ img{
   }//.header-search-form
 }//.site-header
 
-/***************************************/
-/************* MAIN CONTENT ************/
-/***************************************/
+/**********************************/
+/************* LOADING ************/
+/**********************************/
 
 .loading{
   margin-top: 2em;
@@ -233,6 +243,12 @@ img{
     }
   }
 }//.loading
+
+
+/***************************************/
+/************* MAIN CONTENT ************/
+/***************************************/
+
 
 .main-content{
   &.home-search{
@@ -352,9 +368,49 @@ img{
       }//.recipe-box
     }//.recipe-boxes
   }//.search-content
+  &.static-content{
+    font-size: 1em;
+    line-height: 1.45em;
+    a{
+      color: $pink;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }//.static-content
 }//.main-content
 
+/**************************************/
+/************* SITE FOOTER ************/
+/**************************************/
 
+.site-footer{
+  position: absolute;
+  bottom: 25px;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: $font_semibold;
+    li{
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      a{
+        color: $pink;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}//.site-footer
 
 /****************************************/
 /************ MEDIA QUERIES *************/
