@@ -24,8 +24,8 @@
           <a href="<%=recipe.url%>" target="blank">
             <img src="<%=recipe.image%>">
             <h3><%=recipe.name%></h3>
+            <div class="ingredients"><%= recipe.ingredients%></div>
           </a>
-          <p><%= recipe.ingredients%></p>
         </div>
       <% end %>
     </div><!-- .recipe-boxes -->

@@ -271,19 +271,31 @@ img{
           border: 1px solid transparent;
           padding: 5px;
           border-radius: 3px;
-          &:hover{
-            color: $pink; 
-            border-color: $pink;
-          }
+          -webkit-transition: all 0.15s;
+          -moz-transition: all 0.15s;
+          transition: all 0.15s;
           img{
             width: 100%;
           }
           h3{
             margin: 0;
-            font-size: 1em;
+            font-size: 1.2em;
             line-height: 1.3em;
-            font-weight: $font_normal;
+            font-weight: $font_bold;
+            margin-bottom: 0.4em;
           }//h3
+          .ingredients{
+            line-height: 1.3em;
+            color: #777;
+            font-size: 0.95em;
+          }
+          &:hover{
+            color: $pink; 
+            border-color: $pink;
+            .ingredients{
+              color: #333;
+            }
+          }
         }//a
       }//.recipe-box
     }//.recipe-boxes
