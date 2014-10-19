@@ -3,24 +3,15 @@ require 'json'
 namespace :leancook do
   desc 'Import json data (bbcfood, tastykitchen, thepioneerwoman, williamssonoma)'
   task import: :environment do
-    data = File.read('data/bbcfood.json')
-    data = File.read('data/tastykitchen.json')
-    data = File.read('data/thepioneerwoman.json')
-    data = File.read('data/williamssonoma.json')
-    json = JSON.parse(data)
     Recipe.delete_all
-    json.each do |object|
-      recipe = Recipe.new
-      recipe.name = object['name']
-      recipe.description = object['description']
-      recipe.ingredients = object['ingredients']
-      recipe.url = object['url']
-      recipe.image = object['image']
-      recipe.cookTime = object['cookTime']
-      recipe.prepTime = object['prepTime']
-      recipe.source = object['source']
-      recipe.save
-    end
+    data = File.read('data/bbcfood.json')
+    create_recipes(data)
+    data = File.read('data/tastykitchen.json')
+    create_recipes(data)
+    data = File.read('data/thepioneerwoman.json')
+    create_recipes(data)
+    data = File.read('data/williamssonoma.json')
+    create_recipes(data)
   end
 
   desc 'Export json data'
@@ -34,4 +25,20 @@ namespace :leancook do
   task reindex: :environment do
     Recipe.reindex
   end
+end
+
+def create_recipes(data)
+  json = JSON.parse(data)
+  json.each do |object|
+      recipe = Recipe.new
+      recipe.name = object['name']
+      recipe.description = object['description']
+      recipe.ingredients = object['ingredients']
+      recipe.url = object['url']
+      recipe.image = object['image']
+      recipe.cookTime = object['cookTime']
+      recipe.prepTime = object['prepTime']
+      recipe.source = object['source']
+      recipe.save
+    end
 end
