@@ -10,4 +10,7 @@ class HomeController < ApplicationController
       format.html { render :layout => !request.xhr? }
     end
   end
+
+  def about
+  end
 end
