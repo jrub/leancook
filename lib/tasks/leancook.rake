@@ -5,6 +5,7 @@ namespace :leancook do
   task import: :environment do
     data = File.read('data/mini.json')
     json = JSON.parse(data)
+    Recipe.delete_all
     json.each do |object|
       recipe = Recipe.new
       recipe.name = object['name']
@@ -14,6 +15,7 @@ namespace :leancook do
       recipe.image = object['image']
       recipe.cookTime = object['cookTime']
       recipe.prepTime = object['prepTime']
+      recipe.source = object['source']
       recipe.save
     end
   end
