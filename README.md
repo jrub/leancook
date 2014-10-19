@@ -41,3 +41,13 @@ Index data
 
 
 * Recipes data source: https://github.com/fictivekin/openrecipes
+
+## Heroku addons
+
+### Bonsai
+
+Dashboard:
+
+```
+ $ heroku addons:open bonsai
+```
