@@ -20,6 +20,13 @@ namespace :leancook do
     end
   end
 
+  desc 'Export json data'
+  task export: :environment do
+    puts "\n Export which source? (eg: williamssonoma, thepioneerwoman...)t"
+    answer = STDIN.gets.chomp
+    File.open("./data/"+answer+".json", 'w') { |file| file.write(Recipe.where(:source => answer).to_json) }
+  end
+
   desc 'Reindex data'
   task reindex: :environment do
     Recipe.reindex
