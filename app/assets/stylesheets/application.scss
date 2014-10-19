@@ -264,8 +264,14 @@ img{
         width: 100%;
       }
       .text-field{
-        margin-bottom: 1em;
+        margin-bottom: 0.4em;
       }//.text-field
+      .example-field{
+        margin-bottom: 1.5em;
+        color: #999;
+        text-align: left;
+        font-weight: $font_light;
+      }
       .submit-field{
 
       }//.submit-field
