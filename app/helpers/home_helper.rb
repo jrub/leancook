@@ -6,12 +6,11 @@ module HomeHelper
   def cook_mins(recipe)
     cook_time = recipe.cookTime
     if cook_time
-      mins = cook_time.scan(/\d+/)
-      if mins.count > 0
-        cook_mins = mins.first.to_i
-        if cook_time.last == 'H'
-          cook_mins = cook_mins * 60
-        end
+      mins = cook_time.scan(/\d+M/).first
+      hours = cook_time.scan(/\d+H/).first
+      if mins or hours
+        cook_mins = (mins ? mins.chomp.to_i : 0)
+        cook_mins = cook_mins + (hours ? hours.chomp.to_i : 0) * 60
         "<span class='value'>#{cook_mins}</span><span class='label'>min</span>"
       end
     end
