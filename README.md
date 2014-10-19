@@ -27,8 +27,17 @@ Create databases and tables
   $ rake db:create db:migrate
 ```
 
+Import data from json files *
+
+```
+rake leancook:import
+```
+
 Index data
 
 ```
   $ bundle exec rake environment elasticsearch:import:model CLASS='Recipe'
 ```
+
+
+* Recipes data source: https://github.com/fictivekin/openrecipes

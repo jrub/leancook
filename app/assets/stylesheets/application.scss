@@ -160,26 +160,34 @@ img{
   &.search-header{
     overflow: hidden;
     padding: 0px;
+    h2{
+      display: inline-block;
+      width: 25%;
+    }
   }//.search-header
   .header-search-form{
     display: inline-block;
     float: right;
     text-align: right;
-    max-width: 70%;
+    width: 72%;
     margin-top: 20px;
     .pure-input{
       padding: 5px 10px 6px 10px;
       font-size: 1.2em;
       border-color: $purple_light;
+      width: 100%;
     }
     .text-field{
       display: inline-block;
+      width: 75%;
     }//.text-field
     .submit-field{
       display: inline-block;
       margin-left: 5px;
+      width: 22%;
       .pure-button.pure-button-secondary{
-        padding: 7px 25px 6px 25px;
+        padding: 7px 0px 6px 0px;
+        width: 100%;
       }
     }//.submit-field
   }//.header-search-form
