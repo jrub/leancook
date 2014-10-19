@@ -46,6 +46,8 @@ Index data
 
 ### Bonsai
 
+Documentation: https://devcenter.heroku.com/articles/bonsai
+
 Dashboard:
 
 ```
