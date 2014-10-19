@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def search
     @query = params[:query].presence || '*'
 
-    @recipes = Recipe.search_by_ingredients @query
+    @recipes = Recipe.search_by_ingredients(@query).page(params[:page])
     respond_to do |format|
       format.html { render :layout => !request.xhr? }
     end
