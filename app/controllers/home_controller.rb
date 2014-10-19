@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 
     @recipes = Recipe.search_by_ingredients(@query).page(params[:page])
     respond_to do |format|
-      format.html { render :layout => !request.xhr? }
+      format.html { render layout: !request.xhr? }
     end
   end
 
