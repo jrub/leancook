@@ -46,6 +46,12 @@ Index data
 
 ### Bonsai
 
+*REQUIRED* Create index in production:
+
+```
+ $ heroku run bundle exec rake environment elasticsearch:import:model CLASS='Recipe' FORCE=true
+```
+
 Documentation: https://devcenter.heroku.com/articles/bonsai
 
 Dashboard:
@@ -53,3 +59,4 @@ Dashboard:
 ```
  $ heroku addons:open bonsai
 ```
+
