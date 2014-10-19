@@ -9,7 +9,7 @@ $(document).ready(function(){
         }
         return false;
         
-    })
+    });
 
     $("#search_form_home").on('submit', function(){
         var term = $("#query_home").val();
@@ -33,6 +33,7 @@ $(document).ready(function(){
                 history.pushState(null, null, action+"?query="+query);
             }
             $("#content").html(html);
+            pagination();
         });
     }
 
@@ -40,4 +41,17 @@ $(document).ready(function(){
     var supports_history_api = function() {
         return !!(window.history && history.pushState);
     }
+
+    var pagination = function(){
+        $(".more_recipes a").on('click', function(){
+            console.log($(this).attr('href'));
+            $.get($(this).attr('href'), function(html) {
+                $(".more_recipes a").remove();
+                $("#recipes_list").html($("#recipes_list").html() + html);
+                pagination();
+            });
+            return false;
+        });
+    }
+    pagination();
 });

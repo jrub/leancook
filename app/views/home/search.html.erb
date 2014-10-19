@@ -15,25 +15,15 @@
     </div>
   </div><!-- .pure-g -->
 </header>
-<%end%>
 <div id="content" class="site-content">
+<%end%>
+
   <div class="pure-g main-content search-content">
     <h1 class="search-title">Recipes with "<%= query_value(@query) %>"</h1>
-    <div class="recipe-boxes">
-      <% @recipes.each do |recipe| %>
-        <div class="recipe-box">
-          <a href="<%=recipe.url%>" target="blank">
-            <span class="image-wrapper">
-              <span class="image" style="background-image: url(<%=recipe.image%>);"></span>
-              <span class="time-icon">
-                <%=raw cook_mins(recipe)%>
-              </span>
-            </span>
-            <h3><%=recipe.name%></h3>
-            <div class="ingredients"><%= recipe.ingredients%></div>
-          </a>
-        </div>
-      <% end %>
+    <div id="recipes_list">
+      <%=render :partial => "recipes_list" %>
     </div><!-- .recipe-boxes -->
   </div>
+<%unless request.xhr?%>
 </div>
+<%end%>
