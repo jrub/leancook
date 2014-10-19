@@ -1,9 +1,12 @@
 require 'json'
 
 namespace :leancook do
-  desc 'Import json data'
+  desc 'Import json data (bbcfood, tastykitchen, thepioneerwoman, williamssonoma)'
   task import: :environment do
-    data = File.read('data/mini.json')
+    data = File.read('data/bbcfood.json')
+    data = File.read('data/tastykitchen.json')
+    data = File.read('data/thepioneerwoman.json')
+    data = File.read('data/williamssonoma.json')
     json = JSON.parse(data)
     Recipe.delete_all
     json.each do |object|
