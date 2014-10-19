@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: leancook_production
-  username: leancook
-  password: <%= ENV['LEANCOOK_DATABASE_PASSWORD'] %>
